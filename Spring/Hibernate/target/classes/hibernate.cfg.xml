@@ -15,5 +15,5 @@
         <mapping class="com.platzi.Hibernate.model.Course"/>
         <mapping class="com.platzi.Hibernate.model.SocialMedia"/>
         <mapping class="com.platzi.Hibernate.model.TeacherSocialMedia"/>
-    </session-factory>
+    </session-factory> 
 </hibernate-configuration>

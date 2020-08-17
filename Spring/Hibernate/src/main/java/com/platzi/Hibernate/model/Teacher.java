@@ -35,7 +35,7 @@ public class Teacher implements Serializable {
 	private Set<Course> coursesList;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_teacher")
+	@JoinColumn(name = "id_Teacher")
 	private Set<TeacherSocialMedia> teacherSocialMediasList;
 
 	private String name;

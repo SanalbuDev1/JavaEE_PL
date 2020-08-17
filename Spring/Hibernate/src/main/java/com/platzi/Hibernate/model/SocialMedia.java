@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -30,19 +31,17 @@ public class SocialMedia implements Serializable {
 	@Column(name = "icon")
 	private String icon;
 
-	/*
-	 * @ManyToOne
-	 * 
-	 * @JoinColumn(name = "id_social_media") private Set<TeacherSocialMedia>
-	 * teacherSocialMediasList;
-	 * 
-	 * public Set<TeacherSocialMedia> getTeacherSocialMediasList() { return
-	 * teacherSocialMediasList; }
-	 * 
-	 * public void setTeacherSocialMediasList(Set<TeacherSocialMedia>
-	 * teacherSocialMediasList) { this.teacherSocialMediasList =
-	 * teacherSocialMediasList; }
-	 */
+	@OneToMany
+	@JoinColumn(name = "id_social_media")
+	private Set<TeacherSocialMedia> teacherSocialMediasList;
+
+	public Set<TeacherSocialMedia> getTeacherSocialMediasList() {
+		return teacherSocialMediasList;
+	}
+
+	public void setTeacherSocialMediasList(Set<TeacherSocialMedia> teacherSocialMediasList) {
+		this.teacherSocialMediasList = teacherSocialMediasList;
+	}
 
 	public Long getIdSocialMedia() {
 		return idSocialMedia;

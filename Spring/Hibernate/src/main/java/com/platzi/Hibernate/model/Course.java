@@ -2,6 +2,7 @@ package com.platzi.Hibernate.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -26,7 +27,7 @@ public class Course implements Serializable {
 	private Long idCourse;
 	
 	@JoinColumn(name = "id_teacher")
-	@ManyToOne(optional = true , fetch = FetchType.EAGER)
+	@ManyToOne(optional = true , fetch = FetchType.EAGER , cascade = CascadeType.ALL)
 	private Teacher teacher;
 	
 	private String name;

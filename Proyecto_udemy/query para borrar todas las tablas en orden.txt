@@ -1,0 +1,17 @@
+use bdPendientes;
+delete from pendientes;
+
+delete from usuarios;
+
+delete from personas;
+
+delete from estatuspendiente;
+
+
+delete from entradasalidadinero;
+
+delete from ingresosegresos;
+
+delete from grupoingeg;
+
+delete from tipoingeg;

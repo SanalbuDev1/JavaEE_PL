@@ -30,7 +30,7 @@ public class TeacherSocialMedia implements Serializable {
 	private Teacher teacher;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_social_media ")
+	@JoinColumn(name = "id_social_media")
 	private SocialMedia idSocialMedia;
 	
 	private String nickname;

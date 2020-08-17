@@ -1,0 +1,5 @@
+id,fechaCreacion,fechaEntrega,descripcion  ,idEstatusPendiente,observaciones  ,idPersonaQueAsigno,idPersonaAsignado,solucionPendiente
+1,2018/09/02 20:00:00,2018/09/02 20:00:00,enviar factura a cliente Francisco,1,enviar tambien cotización 1003,1,2,
+2,2018/09/02 20:00:00,2018/09/02 20:00:00,instalar impresora en laptop hp,2,,1,3,
+3,2018/09/02 20:00:00,2018/09/02 20:00:00,ir a depositar al banco,3,,4,2,deje la ficha de deposito en la caja
+4,2018/09/02 20:00:00,2018/09/02 20:00:00,pagar el teléfono,1,deje el dinero en la caja,4,5,el recibo de pago esta en caja

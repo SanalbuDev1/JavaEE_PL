@@ -1,9 +1,13 @@
 package com.platzi.Hibernate;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.platzi.Hibernate.dao.TeacherDaoImpl;
+import com.platzi.Hibernate.model.Course;
 import com.platzi.Hibernate.model.Teacher;
 
 /**
@@ -12,19 +16,23 @@ import com.platzi.Hibernate.model.Teacher;
  */
 public class App {
 	public static void main(String[] args) {
-		SessionFactory sessionFactory;
-		Configuration configuration = new Configuration();
-		configuration.configure();
-		sessionFactory = configuration.buildSessionFactory();
-		Session session = sessionFactory.openSession();
+		
 		
 		Teacher teacher = new Teacher();
-		teacher.setAvatar("Prueba");
-		teacher.setName("prueba");
+		teacher.setAvatar("Antoniov");
+		teacher.setName("Antonio");
 		
-		session.beginTransaction();
-		session.save(teacher);
-		session.getTransaction().commit();
+		TeacherDaoImpl s = new TeacherDaoImpl();
+		s.saveTeacher(teacher);
+		
+		/* findAll */
+		
+		List<Teacher> listT =  s.findAllTeacher();
+		for(Teacher data : listT) {
+			System.out.println(data.getName());
+		}
+		
+		
 		
 	}
 }
